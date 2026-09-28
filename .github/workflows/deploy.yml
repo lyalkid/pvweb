@@ -25,14 +25,13 @@ jobs:
           node-version: '20'
           cache: npm
 
-      - run: npm ci
+      - name: Установить зависимости
+        run: make install-ci
 
-      - run: npm run check:all
-
-      - run: npm test
-
-      # base обязателен: сайт отдаётся из подкаталога /<repo>/
-      - run: npm run build -- --base=/${{ github.event.repository.name }}/
+      # Проверки, тесты и сборка. BASE обязателен: сайт отдаётся из подкаталога
+      # /<репозиторий>/, иначе ссылки на ассеты ведут в корень домена.
+      - name: Проверить и собрать
+        run: make ci BASE=/${{ github.event.repository.name }}/
 
       - uses: actions/configure-pages@v5
 
