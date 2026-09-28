@@ -20,6 +20,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # enablement включает Pages через API, если он ещё не включён в настройках
+      # репозитория. Шаг стоит до сборки, чтобы отказ всплывал сразу.
+      - uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       # Версия берётся из .nvmrc: jsdom тянет undici, которому нужен Node >= 22.19.
       - uses: actions/setup-node@v4
         with:
@@ -33,8 +39,6 @@ jobs:
       # /<репозиторий>/, иначе ссылки на ассеты ведут в корень домена.
       - name: Проверить и собрать
         run: make ci BASE=/${{ github.event.repository.name }}/
-
-      - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
         with:
