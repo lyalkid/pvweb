@@ -1,0 +1,212 @@
+[
+ {
+  "filename": "a.nwk",
+  "content": "(A,B);",
+  "format": "newick",
+  "leafCount": 2
+ },
+ {
+  "filename": "a.newick",
+  "content": "((A:0.1,B:0.2)0.9:0.3,C:0.4);",
+  "format": "newick",
+  "leafCount": 3
+ },
+ {
+  "filename": "t.tre",
+  "content": "(A,(B,(C,D)));",
+  "format": "newick",
+  "leafCount": 4
+ },
+ {
+  "filename": "t.tree",
+  "content": "((A,B),(C,D));",
+  "format": "newick",
+  "leafCount": 4
+ },
+ {
+  "filename": "notes.txt",
+  "content": "(X,Y,Z);",
+  "format": "newick",
+  "leafCount": 3
+ },
+ {
+  "filename": "m.nex",
+  "content": "#NEXUS\nbegin trees;\nend;",
+  "format": "nexus",
+  "leafCount": null
+ },
+ {
+  "filename": "m.nexus",
+  "content": "#NEXUS\n",
+  "format": "nexus",
+  "leafCount": null
+ },
+ {
+  "filename": "p.phyloxml",
+  "content": "<phyloxml><phylogeny/></phyloxml>",
+  "format": "phyloxml",
+  "leafCount": null
+ },
+ {
+  "filename": "p.xml",
+  "content": "<phyloxml><phylogeny/></phyloxml>",
+  "format": "phyloxml",
+  "leafCount": null
+ },
+ {
+  "filename": "noext",
+  "content": "#NEXUS\nbegin trees;",
+  "format": "nexus",
+  "leafCount": null
+ },
+ {
+  "filename": "noext2",
+  "content": "<phylogeny></phylogeny>",
+  "format": "phyloxml",
+  "leafCount": null
+ },
+ {
+  "filename": "noext3",
+  "content": "((A,B),C);",
+  "format": "newick",
+  "leafCount": 3
+ },
+ {
+  "filename": "spaces.nwk",
+  "content": "(  A : 0.5 , B )  ;",
+  "format": "newick",
+  "leafCount": 2
+ },
+ {
+  "filename": "deep.nwk",
+  "content": "(((((A,B),C),D),E),F);",
+  "format": "newick",
+  "leafCount": 6
+ },
+ {
+  "filename": "single.nwk",
+  "content": "(A);",
+  "format": "newick",
+  "leafCount": 1
+ },
+ {
+  "filename": "named.nwk",
+  "content": "((A,B)Internal,(C,D)Other)Root;",
+  "format": "newick",
+  "leafCount": 4
+ },
+ {
+  "filename": "unrooted.nwk",
+  "content": "(A,B,C);",
+  "format": "newick",
+  "leafCount": 3
+ },
+ {
+  "filename": "quoted.nwk",
+  "content": "(Homo_sapiens:0.1,Pan_troglodytes:0.2);",
+  "format": "newick",
+  "leafCount": 2
+ },
+ {
+  "filename": "nolen.nwk",
+  "content": "(A,B,(C,D),(E,(F,G)));",
+  "format": "newick",
+  "leafCount": 7
+ },
+ {
+  "filename": "bad.nwk",
+  "content": "not a tree at all",
+  "format": "newick",
+  "leafCount": null
+ },
+ {
+  "filename": "gen0.nwk",
+  "content": "((((S0,(S1,S2)),S3),(S4,S5)),S6);",
+  "format": "newick",
+  "leafCount": 7
+ },
+ {
+  "filename": "gen1.nwk",
+  "content": "((((((S0,S1),S2),S3),(S4,S5)),S6),((S7,S8),(S9,S10)));",
+  "format": "newick",
+  "leafCount": 11
+ },
+ {
+  "filename": "gen2.nwk",
+  "content": "((((S0,S1),S2),(S3,S4)),((S5,(S6,S7)),(S8,S9)));",
+  "format": "newick",
+  "leafCount": 10
+ },
+ {
+  "filename": "gen3.nwk",
+  "content": "(S0,S1);",
+  "format": "newick",
+  "leafCount": 2
+ },
+ {
+  "filename": "gen4.nwk",
+  "content": "(S0,S1);",
+  "format": "newick",
+  "leafCount": 2
+ },
+ {
+  "filename": "gen5.nwk",
+  "content": "((S0,(S1,S2)),((S3,S4),S5));",
+  "format": "newick",
+  "leafCount": 6
+ },
+ {
+  "filename": "gen6.nwk",
+  "content": "(((S0,((S1,(S2,S3)),S4)),(S5,((S6,S7),S8))),S9);",
+  "format": "newick",
+  "leafCount": 10
+ },
+ {
+  "filename": "gen7.nwk",
+  "content": "(S0,((S1,(S2,(S3,S4))),((S5,S6),((S7,(S8,S9)),S10))));",
+  "format": "newick",
+  "leafCount": 11
+ },
+ {
+  "filename": "gen8.nwk",
+  "content": "((S0,S1),(S2,S3));",
+  "format": "newick",
+  "leafCount": 4
+ },
+ {
+  "filename": "gen9.nwk",
+  "content": "((S0,S1),(((S2,S3),((S4,S5),S6)),(S7,(S8,(S9,S10)))));",
+  "format": "newick",
+  "leafCount": 11
+ },
+ {
+  "filename": "gen10.nwk",
+  "content": "((S0,((S1,((S2,S3),S4)),S5)),((S6,S7),(S8,S9)));",
+  "format": "newick",
+  "leafCount": 10
+ },
+ {
+  "filename": "gen11.nwk",
+  "content": "(S0,(S1,((S2,S3),(S4,((((S5,S6),S7),S8),S9)))));",
+  "format": "newick",
+  "leafCount": 10
+ },
+ {
+  "filename": "gen12.nwk",
+  "content": "(S0,(S1,S2));",
+  "format": "newick",
+  "leafCount": 3
+ },
+ {
+  "filename": "gen13.nwk",
+  "content": "((S0,S1),S2);",
+  "format": "newick",
+  "leafCount": 3
+ },
+ {
+  "filename": "gen14.nwk",
+  "content": "(((S0,S1),((S2,S3),(S4,S5))),((S6,((S7,S8),S9)),S10));",
+  "format": "newick",
+  "leafCount": 11
+ }
+]
