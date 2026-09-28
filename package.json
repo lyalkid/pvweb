@@ -5,6 +5,9 @@
   "type": "module",
   "description": "Статическое браузерное приложение для работы с филогенетическими деревьями и танглограммами",
   "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
