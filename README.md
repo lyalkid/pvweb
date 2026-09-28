@@ -38,33 +38,38 @@
 ## Локальный запуск
 
 ```bash
-npm install
-npm run dev
+make install
+make dev
 ```
 
 Приложение откроется на http://127.0.0.1:5173.
 
-Полезные команды:
+Остальные цели показывает `make` без аргументов:
 
 ```bash
-npm run build        # сборка в dist/
-npm run preview      # просмотр собранной версии
-npm run check:all    # типы и линтер
-npm test             # тесты
+make build           # сборка в dist/
+make build BASE=/pvweb/   # так же, как её делает GitHub Pages
+make preview         # просмотр собранной версии
+make check           # типы и линтер
+make test            # тесты
+make ci              # всё вместе, как в workflow
+make clean           # удалить dist/
 ```
 
 ## Развёртывание на GitHub Pages
 
-1. Создайте репозиторий на GitHub и запушьте в него этот каталог.
-2. В настройках репозитория откройте **Settings → Pages** и в поле **Source**
-   выберите **GitHub Actions**.
-3. Запушьте в ветку `main` или `master`.
+Репозиторий: `git@github.com:lyalkid/pvweb.git`.
 
-Дальше всё делает [.github/workflows/deploy.yml](.github/workflows/deploy.yml):
-проверяет типы, собирает проект и публикует. Базовый путь подставляется из имени
-репозитория, поэтому конфигурацию править не нужно.
+Один раз нужно включить публикацию: **Settings → Pages**, в поле **Source**
+выбрать **GitHub Actions**. Без этого workflow соберёт проект, но не опубликует.
 
-Сайт появится по адресу `https://<аккаунт>.github.io/<репозиторий>/`.
+Дальше достаточно пушить в `master`. Всё остальное делает
+[.github/workflows/deploy.yml](.github/workflows/deploy.yml): вызывает
+`make install-ci` и `make ci`, то есть проверяет типы, гоняет линтер и тесты,
+собирает проект и публикует. Базовый путь подставляется из имени репозитория,
+поэтому конфигурацию править не нужно.
+
+Сайт появится по адресу https://lyalkid.github.io/pvweb/.
 
 Адреса страниц хранятся в хеше, например `#/projects/<id>/view`. Это сделано
 намеренно: GitHub Pages отдаёт статику и не умеет переписывать произвольный путь
